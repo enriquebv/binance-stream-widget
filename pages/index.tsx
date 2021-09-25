@@ -77,25 +77,25 @@ export default function Home() {
             , so feel free to check the code to ensure is not a scam.
           </li>
           <li>
-            If you share the widget URL, someone can extract the API keys to trade, because of that is more safe to set
-            the API key restrictions only to <b> Enable reading.</b>
+            If you share the widget URL, someone can extract the API keys to trade, because that is safer to set the API
+            key restrictions only to <b> Enable reading.</b>
           </li>
           <li>
-            {"Don't"} set <i>IP access restrictions</i> in Binance, because widget will no work. Binance {"can't"}{" "}
-            accept browser requests, because of that are proxied in a server.
+            {"Don't"} set IP access restrictions in Binance, because the widget will not work. Binance {"can't"} accept
+            browser requests, because they are proxied in a server.
           </li>
-          <li>No, API keys are not stored in the server, that{"'"}s why are in the widget URL.</li>
+          <li>No, API keys are not stored in the server, {"that's"} why they are in the widget URL.</li>
           <li>
             <u>
               <b>NEVER</b>
             </u>{" "}
-            share your generated widget URL, you{"'"}re at your own risk.
+             share your generated widget URL, {"you're"} at your own risk.
           </li>
           <li>Prices are checked with USDT price.</li>
         </ul>
       </p>
 
-      <p className={styles.description}>2. Select the text color:</p>
+      <p className={styles.description}>2. Select text color:</p>
       <label>
         <p className={styles.description} style={{ fontSize: "1.2em" }}>
           🎨
