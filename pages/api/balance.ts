@@ -1,5 +1,6 @@
 import { BinanceApi } from "../../lib/binance-api";
 import { parse } from "querystring";
+import cryptoPrice from "../../lib/crypto-price";
 
 export default async function handler(req, res) {
   try {
@@ -11,7 +12,10 @@ export default async function handler(req, res) {
 
     const binance = new BinanceApi(params.binance_api_key, params.binance_secret_key);
     const user = await binance.getUser();
-    const prices = await binance.getUSDPrice(["BTC", "ADA"]);
+    const symbolsToCheck = user.balances
+      .filter((balance) => Number(balance.free) + Number(balance.locked) !== 0)
+      .map((balance) => balance.asset);
+    const prices = await binance.getUSDPrice(symbolsToCheck);
     const balances = user.balances
       .filter((balance) => Number(balance.free) + Number(balance.locked) !== 0)
       .map((balance) => {
